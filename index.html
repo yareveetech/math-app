@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-selector">
+        <label for="language">Choose Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="de">German</option>
+            <option value="ar">Arabic</option>
+            <option value="fr">French</option>
+        </select>
+    </div>
+
+    <div class="calculator">
+        <h1 id="title">Simple Math Operations</h1>
+        <label for="operation" id="operationLabel">Choose an operation:</label>
+        <select id="operation">
+            <option value="add">Addition (+)</option>
+            <option value="subtract">Subtraction (-)</option>
+            <option value="multiply">Multiplication (*)</option>
+            <option value="divide">Division (/)</option>
+        </select>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <button id="calculateButton" onclick="performCalculation()">Calculate</button>
+        <h2 id="resultLabel">Result: <span id="result">0</span></h2>
+    </div>
+
+    <!-- Custom Message Box -->
+    <div id="messageBox" class="message-box" style="display: none;">
+        <p id="messageContent"><strong>The result is:</strong> 0</p>
+        <button id="closeButton" onclick="closeMessageBox()">Close</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
